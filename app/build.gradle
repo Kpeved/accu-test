@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion Versions.compileSdk
+    defaultConfig {
+        applicationId "com.lolkek.accu"
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+dependencies {
+
+    implementation project(':core_network')
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation Deps.kotlinStdLib
+    implementation Deps.appCompat
+    implementation Deps.coreKtx
+    implementation Deps.androidXRecyclerView
+
+    implementation Deps.androidXConstraintLayout
+    implementation Deps.androidXCardView
+
+    implementation Deps.rxJava
+    implementation Deps.rxAndroid
+    implementation Deps.rxKotlin
+    implementation Deps.rxRelay
+
+    implementation Deps.okHttpLoggingInterceptor
+    implementation Deps.timber
+
+    implementation Deps.dagger
+    implementation Deps.daggerAndroidSupport
+    implementation Deps.daggerAndroid
+    implementation Deps.threeTen
+
+    kapt Deps.daggerCompiler
+    kapt Deps.daggerAndroidProcessor
+
+    testImplementation Deps.junit
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    androidTestImplementation "com.github.tomakehurst:wiremock:2.25.1"
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+
+}
