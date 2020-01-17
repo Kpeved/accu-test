@@ -7,16 +7,17 @@ object Versions {
     val gradleVersionPlugin = "0.27.0"
 
     val retrofit = "2.7.1"
+    val lifecycle = "2.1.0"
 }
 
 object Deps {
     val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
-    val gradleVersionsPlugin =
-        "com.github.ben-manes:gradle-versions-plugin:${Versions.gradleVersionPlugin}"
+    val gradleVersionsPlugin = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradleVersionPlugin}"
 
     val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     val coreKtx = "androidx.core:core-ktx:1.2.0-rc01"
+    val fragmentKtx = "androidx.fragment:fragment-ktx:1.2.0-rc01"
     val androidXConstraintLayout = "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
     val appCompat = "androidx.appcompat:appcompat:1.2.0-alpha01"
 
@@ -31,6 +32,10 @@ object Deps {
     val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     val retrofitRxAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
     val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+
+    val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
+    val lifecycleApt = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
+    val livedataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
 
     val glide = "com.github.bumptech.glide:glide:4.7.1"
     val glideApt = "com.github.bumptech.glide:compiler:4.7.1"

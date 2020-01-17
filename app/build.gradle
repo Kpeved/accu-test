@@ -23,36 +23,26 @@ android {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
 }
 
 dependencies {
 
     implementation project(':core_network')
+    implementation project(':core')
+    implementation project(':feature_weather')
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation Deps.kotlinStdLib
-    implementation Deps.appCompat
-    implementation Deps.coreKtx
-    implementation Deps.androidXRecyclerView
 
-    implementation Deps.androidXConstraintLayout
-    implementation Deps.androidXCardView
+    implementation Deps.lifecycleExtensions
+    implementation Deps.livedataKtx
 
-    implementation Deps.rxJava
-    implementation Deps.rxAndroid
-    implementation Deps.rxKotlin
-    implementation Deps.rxRelay
-
-    implementation Deps.okHttpLoggingInterceptor
-    implementation Deps.timber
-
-    implementation Deps.dagger
-    implementation Deps.daggerAndroidSupport
-    implementation Deps.daggerAndroid
-    implementation Deps.threeTen
 
     kapt Deps.daggerCompiler
     kapt Deps.daggerAndroidProcessor
+    kapt Deps.lifecycleApt
 
     testImplementation Deps.junit
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

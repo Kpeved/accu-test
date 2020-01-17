@@ -1,11 +1,3 @@
 <resources>
     <string name="app_name">AccuTest</string>
-    <string name="hi_temp">Hi: %s</string>
-    <string name="low_temp">Low: %s</string>
-    <string name="error">Error happened: %s</string>
-    <string name="entries_title">Select city</string>
-    <string name="forecast_title">Forecast</string>
-    <string name="for_period">For period:</string>
-    <string name="range_one_day">1 day</string>
-    <string name="range_five_days">5 days</string>
 </resources>

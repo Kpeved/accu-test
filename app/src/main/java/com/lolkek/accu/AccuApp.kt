@@ -7,7 +7,6 @@ import timber.log.Timber
 
 class AccuApp : DaggerApplication() {
 
-
     override fun onCreate() {
         super.onCreate()
         if (BuildConfig.DEBUG) {

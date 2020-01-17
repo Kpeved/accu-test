@@ -1,1 +1,1 @@
-include ':app', ':core_network'
+include ':app', ':core_network', ':core', ':feature_weather'
