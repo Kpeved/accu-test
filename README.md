@@ -19,5 +19,7 @@ Dependency injection was done by using Dagger2
 
 ### Other libraries
 Network: Retrofit, Gson
+
 Logging: Timber
+
 Tests: espresso
